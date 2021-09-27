@@ -1,0 +1,277 @@
+.pagelayout-course #region-main {
+    .section.main {
+        background-color: #fff;
+        border: none;
+        border-radius: $card-border-radius;
+        -moz-border-radius: $card-border-radius;
+        -webkit-border-radius: $card-border-radius;
+        @extend .shadow-sm;
+    }
+}
+
+body#page-course-view-timeline {
+    .header-section,
+    .filters-section,
+    .activity {
+        background-color: #fff;
+    }
+
+    #region-main {
+        padding: 0 0 2rem 0;
+
+        .section.main {
+            background-color: initial;
+        }
+    }
+
+    div.timeline ul.section .activity {
+        border: none;
+        border-left: 4px solid $primary;
+
+        &.modtype_book,
+        &.modtype_resource,
+        &.modtype_folder,
+        &.modtype_imscp,
+        &.modtype_page,
+        &.modtype_url {
+            border-left: 4px solid $info;
+        }
+    }
+
+    .post-comment-btn {
+        border-top-left-radius: 0;
+        -moz-border-radius-topleft: 0;
+        -webkit-border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        -moz-border-radius-bottomleft: 0;
+        -webkit-border-bottom-left-radius: 0;
+    }
+
+    &.yinyang-darkmode {
+        .header-section,
+        .filters-section,
+        .activity {
+            background-color: $bg-blocksbody-darkmode;
+        }
+
+        .discuss {
+            .post .entry .entry-content {
+                background-color: $bg-primary-darkmode;
+            }
+
+            .add-comment .post-comment-input {
+                background-color: $bg-searchinput-darkmode;
+                border: 1px solid $primary-darkmode;
+                color: $primary-darkmode;
+            }
+        }
+
+        .post-comment-btn {
+            border: 1px solid $primary-darkmode;
+            color: $primary-links-darkmode;
+
+            &:hover {
+                background-color: darken($primary-darkmode, 20%);
+                color: $primary-darkmode;
+            }
+        }
+    }
+}
+
+.course-content ul.topics li.section,
+.course-content ul.weeks li.section {
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+
+#page-course-view-topics,
+#page-course-view-weeks {
+    #region-main {
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    &.editing {
+        .course-content .topics .section {
+            width: calc(100% - 20px);
+        }
+    }
+
+    .section .activity .contentwithoutlink > a,
+    .section .activity .activityinstance > a {
+        display: initial;
+    }
+
+    .course-content {
+        .topics.singlecardtopics {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            >:nth-child(even) {
+                margin-right: .5rem;
+            }
+
+            >:nth-child(odd) {
+                margin-left: .5rem;
+            }
+
+            .section {
+                flex: 0 0 calc(50% - .5rem);
+
+                &:first-of-type {
+                    flex: 0 0 100%;
+                    margin: 0;
+                }
+
+                .activity.label {
+                    margin: 0;
+
+                    .mod-indent-outer {
+                        padding-left: 0;
+                        display: block;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: 1px;
+                }
+
+                &.singlecardprogress {
+                    padding-bottom: 0;
+
+                    .topic-wrapper {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        padding: 0 .5rem;
+
+                        .topic-img {
+                            margin: 0;
+                            width: 90px;
+                            height: 90px;
+                            background-color: $brand-primary;
+                            border-radius: 100%;
+                            text-align: center;
+                            padding: 20px;
+                            vertical-align: top;
+                            flex: 0 0 0;
+
+                            i {
+                                font-size: 48px;
+                                color: #fff;
+                            }
+                        }
+
+                        .topic-content {
+                            flex: 1 0 0;
+
+                            .left.side {
+                                padding: 0;
+                            }
+
+                            .section-title,
+                            .section-summary-activities {
+                                margin-left: .5rem;
+                            }
+                        }
+                    }
+
+                    .topic-progress {
+                        margin-top: .25rem;
+                        flex: 1 1 100%;
+
+                        .title {
+                            text-align: center;
+                            margin-bottom: 0;
+                        }
+
+                        .progress {
+                            border-bottom-left-radius: $card-border-radius;
+                            border-bottom-right-radius: $card-border-radius;
+                            -moz-border-radius-bottomleft: $card-border-radius;
+                            -moz-border-radius-bottomright: $card-border-radius;
+                            -webkit-border-bottom-left-radius: $card-border-radius;
+                            -webkit-border-bottom-right-radius: $card-border-radius;
+                        }
+                    }
+                }
+            }
+        }
+
+        .single-section .section-navigation {
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .single-section .sectionname,
+        .section .sectionname {
+            color: $primary;
+            background-color: #fff;
+            letter-spacing: .1em;
+            font-weight: 700;
+            text-align: center;
+            padding: .5rem 0;
+            -webkit-border-radius: $card-border-radius;
+            -moz-border-radius: $card-border-radius;
+            border-radius: $card-border-radius;
+            @extend .shadow-sm;
+        }
+    }
+
+    .section-navigation.mdl-bottom {
+        margin: 1rem 0;
+
+        .larrow,
+        .rarrow {
+            font-size: 2em;
+            padding: .3em;
+            text-align: center;
+        }
+
+        .larrow .icon-arrow-left,
+        .rarrow .icon-arrow-right {
+            display: block;
+            height: 1em;
+            width: 1em;
+            margin: .1em auto;
+        }
+
+        .larrow {
+            float: left;
+            border-right: 1px solid #eee;
+            margin-right: .3em;
+
+            .icon-arrow-left {
+                background: transparent url('[[pix:theme|left-arrow]]') no-repeat 50% 50%;
+            }
+        }
+
+        .rarrow {
+            float: right;
+            border-left: 1px solid #eee;
+            margin-left: .3em;
+
+            .icon-arrow-right {
+                background: transparent url('[[pix:theme|right-arrow]]') no-repeat 50% 50%;
+            }
+        }
+
+        .mdl-left .text .nav_guide,
+        .mdl-right .text .nav_guide {
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            font-style: normal;
+            color: #565656;
+        }
+
+        .mdl-left .text {
+            float: right;
+        }
+
+        .mdl-right .text {
+            float: left;
+        }
+    }
+}

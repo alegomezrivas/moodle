@@ -1,0 +1,51 @@
+.courses {
+    .course-contacts {
+        margin: -30px 6px -20px 6px;
+        text-align: right;
+
+        .contact {
+            margin: 0 3px;
+
+            img {
+                width: 48px;
+                border: 2px solid white;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .card-deck {
+        margin-bottom: .5rem;
+    }
+
+    .card {
+        .btn {
+            border-radius: $containers-topright-border-radius;
+            -moz-border-radius: $containers-topright-border-radius;
+            -webkit-border-radius: $containers-topright-border-radius;
+        }
+
+        .badge {
+            border-radius: $card-border-radius;
+            -moz-border-radius: $card-border-radius;
+            -webkit-border-radius: $card-border-radius;
+        }
+    }
+}
+
+#frontpage-category-combo .courses .card-deck .card,
+#frontpage-course-list .frontpage-course-list-all .card-deck .card {
+    margin-bottom: 2rem;
+}
+
+@include media-breakpoint-up(sm) {
+    .card-deck {
+        margin-right: 0;
+        margin-left: 0;
+
+        .card {
+            max-width: calc(33.333% - .5rem);
+        }
+    }
+}

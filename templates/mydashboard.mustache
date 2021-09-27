@@ -1,0 +1,121 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_yinyang/mydashboard
+
+    Admin time setting template.
+
+    Mano mydashboard layout template.
+
+    Context variables required for this template:
+    * sitename - The name of the site
+    * output - The core renderer for the page
+    * bodyattributes - attributes for the body tag as a string of html attributes
+    * sidepreblocks - HTML for the blocks
+    * hasblocks - true if there are blocks on this page
+    * regionmainsettingsmenu - HTML for the region main settings menu
+    * hasregionmainsettingsmenu - There is a region main settings menu on this page.
+
+    Example context (json):
+    {
+        "sitename": "Moodle",
+        "output": {
+            "doctype": "<!DOCTYPE html>",
+            "page_title": "Test page",
+            "favicon": "favicon.ico",
+            "main_content": "<h1>Headings make html validators happier</h1>"
+         },
+        "bodyattributes":"",
+        "sidepreblocks": "<h2>Blocks html goes here</h2>",
+        "hasblocks":true,
+        "regionmainsettingsmenu": "",
+        "hasregionmainsettingsmenu": false
+    }
+}}
+{{> theme_yinyang/head }}
+
+<body {{{ bodyattributes }}}>
+    {{> core/local/toast/wrapper}}
+
+    {{{ output.show_license_notice }}}
+
+<div id="page-wrapper" class="d-print-block">
+
+    {{{ output.standard_top_of_body_html }}}
+
+    <div id="page" class="d-print-block">
+
+        <aside class="page-sidebar">
+            {{> theme_yinyang/sidebar }}
+        </aside>
+
+        <div id="page-content" class="d-print-block">
+            <div id="region-main-box">
+                <section id="region-main" aria-label="{{#str}}content{{/str}}">
+                    {{{ output.search_box }}}
+
+                    {{{ output.course_content_header }}}
+                    {{{ output.main_content }}}
+                    {{{ output.activity_navigation }}}
+                    {{{ output.course_content_footer }}}
+                </section>
+            </div>
+        </div>
+
+        {{> theme_yinyang/footer }}
+    </div>
+
+    {{#hasblocks}}
+        <i id="sidepreopen-control"
+           aria-expanded="{{#rightsideopen}}true{{/rightsideopen}}{{^rightsideopen}}false{{/rightsideopen}}"
+           aria-controls="sidepre-blocks"
+           data-action="toggle-drawer"
+           data-side="right"
+           data-preference="rightside-open"
+           class="fa"
+           title="{{#str}} showhideblocks, theme_moove {{/str}}">
+        </i>
+
+        <section id="sidepre-blocks" data-region="blocks-column" class="d-print-none page-blocks" aria-label="{{#str}}blocks{{/str}}">
+            {{> theme_yinyang/blocks-header }}
+            {{{ sidepreblocks }}}
+        </section>
+    {{/hasblocks}}
+
+    {{{ output.standard_after_main_region_html }}}
+</div>
+
+</body>
+</html>
+{{#js}}
+    M.util.js_pending('theme_boost/loader');
+
+    require(['theme_boost/loader'], function() {
+        M.util.js_complete('theme_boost/loader');
+    });
+
+    M.util.js_pending('theme_boost/drawer');
+
+    require(['theme_boost/drawer'], function(mod) {
+        mod.init();
+        M.util.js_complete('theme_boost/drawer');
+    });
+
+    require(['theme_yinyang/darkmode'], function(DarkMode) {
+        DarkMode.init();
+    });
+{{/js}}

@@ -1,0 +1,56 @@
+#page-footer {
+    background: $bg-primary-darkmode;
+    background-image: url('[[pix:theme|bg_footer]]');
+    background-position: 0 -50px;
+    padding: 2rem 0;
+    color: #bdbdbd;
+
+    .about {
+        .logo {
+            display: inline-block;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            &.mini {
+                display: none;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .contact {
+        h2 {
+            color: #fff;
+        }
+    }
+
+    .networks {
+        margin: 1rem 0 1rem .25rem;
+
+        a {
+            width: 42px;
+            height: 42px;
+            padding: .5rem 1rem;
+            border: 1px solid #fff;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: .25rem;
+        }
+
+        p {
+            color: #fff;
+        }
+    }
+
+    .usertour {
+        margin-left: 15px;
+    }
+}

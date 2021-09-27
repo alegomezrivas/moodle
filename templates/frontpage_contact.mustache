@@ -1,0 +1,35 @@
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>{{#str}}contactinfo, theme_yinyang{{/str}}</h2>
+                        {{#address}}<p>{{address}}</p>{{/address}}
+                        {{#phone}}<p><b>{{#str}}phone, theme_yinyang{{/str}}</b>: {{phone}}</p>{{/phone}}
+                        {{#mail}}<p><b>{{#str}}email, theme_yinyang{{/str}}</b>: {{mail}}</p>{{/mail}}
+                        {{#whatsapp}}<a class="btn btn-success btn-block" href="https://api.whatsapp.com/send?phone={{whatsapp}}"><i class="fa fa-whatsapp"></i> Send a message</a>{{/whatsapp}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-8">
+                <div class="numbers">
+                    <h3>{{#str}}somenumbers, theme_yinyang{{/str}}</h3>
+                    <p>{{#str}}somenumbers_desc, theme_yinyang{{/str}}</p>
+
+                    <div class="row">
+                        <div class="col">
+                            <p><span class="bignumber">{{users}}</span> {{#str}}users{{/str}}</p>
+                        </div>
+                        <div class="col">
+                            <p><span class="bignumber">{{courses}}</span> {{#str}}courses{{/str}}</p>
+                        </div>
+                        <div class="col">
+                            <p><span class="bignumber">{{activities}}</span> {{#str}}activities{{/str}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

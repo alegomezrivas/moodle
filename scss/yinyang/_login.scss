@@ -1,0 +1,151 @@
+.pagelayout-login {
+    #page-wrapper {
+        width: 100%;
+        margin: 0 auto;
+
+        #page {
+            width: 100%;
+            min-height: 100vh;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background: #f2f2f2;
+
+            #page-content {
+                padding: 0;
+                width: 100%;
+                background: #fff;
+                overflow: hidden;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
+                flex-direction: row;
+
+                #region-main-box {
+                    width: 560px;
+                    min-height: 100vh;
+                    display: block;
+
+                    #region-main {
+                        padding: 1rem;
+                    }
+                }
+
+                .loginbg {
+                    width: calc(100% - 560px);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    &.login-left {
+        .loginbg {
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(0,0,0,.1);
+            }
+        }
+    }
+
+    &.login-right {
+        .loginbg {
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(0, 0, 0, .1);
+            }
+        }
+
+        #page-wrapper #page #page-content {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &.login-center {
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+        #region-main-box {
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        #page-wrapper {
+            #page,
+            #page #page-content {
+                background-color: initial;
+            }
+        }
+    }
+
+    form .form-control,
+    form .custom-select {
+        height: calc(3rem);
+        -webkit-border-radius: $card-border-radius;
+        -moz-border-radius: $card-border-radius;
+        border-radius: $card-border-radius;
+    }
+}
+
+// Register page.
+#page-login-signup {
+    form .form-control,
+    form .custom-select {
+        width: calc(100% - 15px);
+    }
+}
+
+// Forgot password page.
+#page-login-forgot_password {
+    .page-sidebar {
+        display: none;
+    }
+
+    #page-content {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    #region-main {
+        background-color: #fff;
+        padding: 1.25rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #page-login-index.notloggedin,
+    #page-login-signup.notloggedin {
+        #page-content,
+        #page-footer {
+            padding-left: 0 !important;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+body.pagelayout-secure {
+    #page-header {
+        margin-top: 40px;
+    }
+
+    #page-content {
+        margin-top: 0;
+        padding-left: 0;
+
+        #region-main {
+            padding-top: 0;
+            padding-right: 1.5em;
+        }
+    }
+}

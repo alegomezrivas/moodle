@@ -1,0 +1,24 @@
+{{{ output.user_menu }}}
+
+<div class="actionicons">
+    {{{ output.navbar_plugin_output }}}
+
+    {{{ output.render_lang_menu }}}
+</div>
+
+{{> theme_yinyang/nav-drawer }}
+
+{{# output.has_logo }}
+    <div id="sidebar-brand">
+        <a href="{{{ config.wwwroot }}}">
+            <img class="logo" src="{{output.get_logo_url}}" alt="{{sitename}}">
+        </a>
+    </div>
+{{/ output.has_logo }}
+{{^ output.has_logo }}
+    <div id="sidebar-brand">
+        <a href="{{{ config.wwwroot }}}">
+            <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
+        </a>
+    </div>
+{{/ output.has_logo }}

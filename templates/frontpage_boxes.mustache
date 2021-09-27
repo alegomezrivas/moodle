@@ -1,0 +1,19 @@
+{{#enablemarketingboxes}}
+    <div id="promoboxes">
+        <div class="container">
+            {{#boxessubtitle}}<p class="subtitle">{{boxessubtitle}}</p>{{/boxessubtitle}}
+            {{#boxestitle}}<h2>{{boxestitle}}</h2>{{/boxestitle}}
+            {{#boxesdescription}}<p>{{boxesdescription}}</p>{{/boxesdescription}}
+
+            <div class="row">
+                {{#boxes}}
+                    <div class="col-md-4">
+                        <a href="{{boxurl}}"><img src="{{boximage}}" alt="{{boxtitle}}"></a>
+                        <a href="{{boxurl}}"><h3>{{boxtitle}}</h3></a>
+                        <p>{{boxdescription}}</p>
+                    </div>
+                {{/boxes}}
+            </div>
+        </div>
+    </div>
+{{/enablemarketingboxes}}

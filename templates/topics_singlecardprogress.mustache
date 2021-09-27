@@ -1,0 +1,21 @@
+<li id="section-1" class="{{classattr}}" role="region" aria-label="{{title}}">
+    <div class="topic-wrapper">
+        <div class="topic-img">
+            <i class="fa fa-laptop"></i>
+        </div>
+        <div class="topic-content">
+            <div class="left side"></div>
+            <div class="right side"></div>
+            <div class="content">
+                <h4 class="section-title">{{{titlewithlink}}}</h4>
+                {{#summary}}<div class="summarytext">{{summary}}</div>{{/summary}}
+            </div>
+        </div>
+    </div>
+    <div class="topic-progress">
+        <p class="title">{{#str}}topic_progress, theme_yinyang{{/str}}</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">{{progress}}%</div>
+        </div>
+    </div>
+</li>

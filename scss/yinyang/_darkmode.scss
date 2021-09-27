@@ -1,0 +1,122 @@
+body.yinyang-darkmode {
+    color: $primary-darkmode;
+
+    .table,
+    table.collection,
+    table.flexible,
+    .generaltable {
+        color: $primary-darkmode;
+        background-color: $bg-primary-darkmode;
+    }
+
+    a {
+        color: $primary-links-darkmode;
+    }
+
+    .yinyang-searchinput {
+        .input-group-text {
+            background-color: $bg-searchinput-darkmode;
+        }
+
+        input {
+            background-color: $bg-searchinput-darkmode;
+        }
+    }
+
+    #page {
+        background-color: $bg-primary-darkmode;
+    }
+
+    div[role="main"] {
+        background-color: $bg-blocksbody-darkmode;
+    }
+
+    .page-blocks {
+        background-color: $bg-blocksbody-darkmode;
+
+        .blocks-header {
+            background-color: $bg-blocksheader-darkmode;
+        }
+
+        #block-region-side-pre {
+            background-color: $bg-blocksbody-darkmode;
+        }
+    }
+
+    aside.page-sidebar {
+        background-color: $bg-blocksbody-darkmode;
+
+        #nav-drawer {
+            .list-group-item {
+
+                &:not(.active) {
+                    background-color: initial;
+
+                    .media-left {
+                        color: #fff;
+                    }
+
+                    .media-body {
+                        color: $primary-darkmode;
+                    }
+                }
+            }
+        }
+
+        .actionicons {
+            .popover-region,
+            .dropdown {
+                .popover-region-toggle,
+                .dropdown-toggle {
+                    border: 1px solid $primary-links-darkmode;
+
+                    .icon {
+                        color: $primary-links-darkmode;
+                    }
+                }
+            }
+        }
+
+        #sidebar-brand img {
+            -webkit-filter: grayscale(1) invert(1);
+            filter: grayscale(1) invert(1);
+        }
+    }
+
+    .card, #page-enrol-users #filterform,
+    .que .history,
+    .userprofile .profile_tree section,
+    .groupinfobox,
+    .well {
+        background-color: $bg-blocksbody-darkmode;
+        -webkit-box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.5) !important;
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .5)!important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    .path-calendar .maincalendar .calendar-controls .current,
+    .course-content .single-section .sectionname,
+    .course-content .single-section .sectionname a,
+    .course-content .section .sectionname,
+    .course-content .section .sectionname a {
+        color: #fff !important;
+    }
+
+    .dashboard-card-deck .dashboard-card .dashboard-card-footer,
+    #region-main .section.main,
+    .course-content .single-section .sectionname,
+    .course-content .section .sectionname {
+        background-color: $bg-blocksbody-darkmode !important;
+    }
+}

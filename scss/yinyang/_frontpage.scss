@@ -1,0 +1,190 @@
+#page-site-index.notloggedin {
+    #page-content,
+    #page-footer {
+        padding-left: 0;
+    }
+
+    #page-footer .footer-content{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .navbar {
+        max-height: 80px;
+
+        .logo img {
+            max-height: 50px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+        }
+    }
+
+    #toparea {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        min-height: 640px;
+
+        .caption {
+            margin: 10rem 0;
+        }
+    }
+
+    #promoboxes {
+        padding: 2rem 0 4rem 0;
+        background-color: #fff;
+        text-align: center;
+
+        .subtitle {
+            font-weight: 500;
+            color: $primary;
+        }
+
+        h2 {
+            font-weight: 500;
+            color: #000;
+        }
+
+        h3 {
+            color: #000;
+        }
+    }
+
+    #region-main {
+        padding: 2rem 0 !important;
+    }
+
+    #logos {
+        background-color: #fff;
+        padding: 4rem 0;
+
+        .col {
+            min-width: 0;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                transition: transform .2s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    #contact {
+        padding: 4rem 0;
+        background-image: url('[[pix:theme|bg_contact]]');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .card-body {
+            padding: 4rem;
+        }
+
+        .numbers {
+            h3 {
+                font-weight: 500;
+            }
+
+            padding: 4rem 2rem;
+
+            .bignumber {
+                color: $primary;
+                font-size: 4em;
+                display: block;
+            }
+        }
+    }
+
+    #page-header .card {
+        background-color: initial;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+
+        .card-body {
+            padding: 1.25rem 0;
+
+            h1 {
+                color: $primary;
+                font-weight: 500;
+            }
+        }
+    }
+
+    #region-main {
+        padding-top: 0;
+    }
+}
+
+#frontpage-available-course-list {
+    .card-deck {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        color: $primary;
+        text-align: center;
+        margin-bottom: 1.25rem;
+
+        &:before,
+        &:after {
+            display: inline-block;
+            content: "";
+            border-bottom: 1px solid $primary;
+            border-top: 1px solid $primary;
+            width: 8rem;
+            height: 5px;
+            margin: 0 .5rem;
+            vertical-align: bottom;
+            transform: translateY(-1rem);
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    #page-site-index.notloggedin {
+        #frontpage-available-course-list {
+            .card-deck .card {
+                margin-right: 1rem;
+                margin-left: 1rem;
+                max-width: calc(33.333% - 2rem);
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #page-site-index {
+        #frontpage-available-course-list {
+            h2 {
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+
+            .card-deck {
+                margin-bottom: 0 !important;
+            }
+
+            .card-title {
+                font-size: 1.171875rem;
+            }
+        }
+    }
+
+    #page-site-index.notloggedin {
+        #page-content,
+        #page-footer {
+            padding-left: 0 !important;
+        }
+    }
+}

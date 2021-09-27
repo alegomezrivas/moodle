@@ -1,0 +1,68 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Page footer.
+}}
+<footer id="page-footer">
+    <div class="container-fluid">
+        <div class="footer-content">
+            <div class="row">
+                <div class="col-md-4 about">
+                    {{# output.has_logo }}
+                        <a href="{{{ config.wwwroot }}}" id="sidebar-brand">
+                            <span class="logo">
+                                <img src="{{logo_negative}}" alt="{{sitename}}">
+                            </span>
+                        </a>
+                    {{/ output.has_logo }}
+                    {{^ output.has_logo }}
+                        <a href="{{{ config.wwwroot }}}" id="sidebar-brand">
+                            <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
+                        </a>
+                    {{/ output.has_logo }}
+                </div>
+                <div class="col-md-4 contact">
+                    <h2>{{#str}}contactinfo, theme_yinyang{{/str}}</h2>
+
+                    {{#address}}<p><b>{{#str}}address, theme_yinyang{{/str}}</b>: {{address}}</p>{{/address}}
+                    {{#phone}}<p><b>{{#str}}phone, theme_yinyang{{/str}}</b>: {{phone}}</p>{{/phone}}
+                    {{#mail}}<p><b>{{#str}}email, theme_yinyang{{/str}}</b>: {{mail}}</p>{{/mail}}
+                </div>
+                <div class="col-md-4 social">
+                    <div class="stores">
+                        {{#iosappid}}<a href="https://apps.apple.com/app/id{{iosappid}}"><img src="{{config.wwwroot}}/theme/yinyang/pix/store_google.svg" alt="Play Store"></a>{{/iosappid}}
+                        {{#androidappid}}<a href="https://play.google.com/store/apps/details?id={{androidappid}}"><img src="{{config.wwwroot}}/theme/yinyang/pix/store_apple.svg" alt="App Store"></a>{{/androidappid}}
+                    </div>
+
+                    <div class="networks">
+                        <p>{{#str}}followus, theme_yinyang{{/str}}</p>
+                        {{#whatsapp}}<a href="https://api.whatsapp.com/send?phone={{whatsapp}}"><i class="fa fa-whatsapp"></i></a>{{/whatsapp}}
+                        {{#facebook}}<a href="{{facebook}}"><i class="fa fa-facebook"></i></a>{{/facebook}}
+                        {{#twitter}}<a href="{{twitter}}"><i class="fa fa-twitter"></i></a>{{/twitter}}
+                        {{#instagram}}<a href="{{instagram}}"><i class="fa fa-instagram"></i></a>{{/instagram}}
+                        {{#linkedin}}<a href="{{linkedin}}"><i class="fa fa-linkedin"></i></a>{{/linkedin}}
+                        {{#youtube}}<a href="{{youtube}}"><i class="fa fa-youtube"></i></a>{{/youtube}}
+                    </div>
+                </div>
+            </div>
+
+            <div id="course-footer">{{{ output.course_footer }}}</div>
+            {{{ output.standard_footer_html }}}
+            {{{ output.standard_end_of_body_html }}}
+        </div>
+    </div>
+</footer>
