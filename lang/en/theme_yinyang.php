@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 $string['pluginname'] = 'Yin-Yang';
 $string['choosereadme'] = 'Yin-Yang is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
 $string['topic_progress'] = 'Topic\'s progress';
-$string['access'] = 'Access';
+$string['access'] = 'Accesar';
 $string['prev_topic'] = 'Previous topic';
 $string['prev_week'] = 'Previous week';
 $string['next_topic'] = 'Next topic';
@@ -102,15 +102,15 @@ $string['youtube'] = 'Youtube URL';
 $string['instagram'] = 'Instagram URL';
 
 // Contact numbers strings.
-$string['somenumbers'] = 'Some of our numbers';
-$string['somenumbers_desc'] = 'Numbers that reflect our credibility and trust placed in us.';
+$string['somenumbers'] = 'Algunos de nuestros números';
+$string['somenumbers_desc'] = 'Números que reflejan nuestra credibilidad y confianza depositada en nosotros.';
 
 // Footer strings.
-$string['address'] = 'Address';
-$string['phone'] = 'Phone';
-$string['email'] = 'Email';
-$string['followus'] = 'Follow us';
-$string['contactinfo'] = 'Contact info';
+$string['address'] = 'Dirección';
+$string['phone'] = 'Teléfono';
+$string['email'] = 'Correo electrónico';
+$string['followus'] = 'Síguenos';
+$string['contactinfo'] = 'Datos de contacto';
 
 // License Settings.
 $string['licensingsettings'] = 'Licensing';

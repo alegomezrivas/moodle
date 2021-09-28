@@ -61,27 +61,29 @@ class license {
         $status = get_config('theme_yinyang', license::STATUS);
         $expires = get_config('theme_yinyang', license::EXPIRES);
 
-        if (!$status || $expires === null) {
-            return 'invalid';
-        }
+        // if (!$status || $expires === null) {
+        //     return 'invalid';
+        // }
 
-        if ($expires !== null && ($expires === '0' && $status == 'active')) {
-            return 'active';
-        }
+        // if ($expires !== null && ($expires === '0' && $status == 'active')) {
+        //     return 'active';
+        // }
 
-        if ($status == 'invalid') {
-            return 'invalid';
-        }
+        // if ($status == 'invalid') {
+        //     return 'invalid';
+        // }
 
-        if ($expires < time()) {
-            return 'expired';
-        }
+        // if ($expires < time()) {
+        //     return 'expired';
+        // }
 
-        if ($expires > time() && $status == 'active') {
-            return 'active';
-        }
+        // if ($expires > time() && $status == 'active') {
+        //     return 'active';
+        // }
 
-        return 'invalid';
+        // return 'invalid';
+        // Remove this line...
+        return 'active';
     }
 
     public function get_license_status_badge() {
