@@ -111,6 +111,12 @@ $string['phone'] = 'Teléfono';
 $string['email'] = 'Correo electrónico';
 $string['followus'] = 'Síguenos';
 $string['contactinfo'] = 'Datos de contacto';
+$string['category'] = 'Categorías';
+$string['sities'] = 'Sitios de importancia';
+$string['acl'] = 'www.acl.cl';
+$string['academy'] = 'www.aclacademy.cl';
+$string['partners'] = 'www.partnerx.cl';
+
 
 // License Settings.
 $string['licensingsettings'] = 'Licensing';

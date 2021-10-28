@@ -10,7 +10,7 @@
             display: inline-block;
 
             img {
-                max-width: 100%;
+                max-width: 60%;
                 height: auto;
             }
 
@@ -25,8 +25,21 @@
     }
 
     .contact {
-        h2 {
+        h2, h5 {
             color: #fff;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+          
+        a:link {
+            color: #c6cfd2;
+        }
+        
+        a:hover {
+            border-bottom: 1px solid;
         }
     }
 

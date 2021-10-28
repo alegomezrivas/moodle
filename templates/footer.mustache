@@ -20,7 +20,7 @@
 <footer id="page-footer">
     <div class="container-fluid">
         <div class="footer-content">
-            <div class="row">
+            <div class="row" style="text-align: center; padding-bottom:80px;">
                 <div class="col-md-4 about">
                     {{# output.has_logo }}
                         <a href="{{{ config.wwwroot }}}" id="sidebar-brand">
@@ -37,33 +37,24 @@
                     <h6 style="font-weight:700; padding-top:10px;">Impulsamos la transformación digital</h6>
                 </div>
                 <div class="col-md-4 contact">
-                    <h2>{{#str}}contactinfo, theme_yinyang{{/str}}</h2>
+                    <h5 style="font-weight:400;  padding-bottom:10px;"><b>{{#str}}category, theme_yinyang{{/str}}</b></h5>
 
-                    {{#address}}<p><b>{{#str}}address, theme_yinyang{{/str}}</b>: {{address}}</p>{{/address}}
-                    {{#phone}}<p><b>{{#str}}phone, theme_yinyang{{/str}}</b>: {{phone}}</p>{{/phone}}
-                    {{#mail}}<p><b>{{#str}}email, theme_yinyang{{/str}}</b>: {{mail}}</p>{{/mail}}
+                    <p><b>Agilidad</b></p>
+                    <p><b>Miscellaneous</b></p>
                 </div>
-                <div class="col-md-4 social">
-                    <div class="stores">
-                        {{#iosappid}}<a href="https://apps.apple.com/app/id{{iosappid}}"><img src="{{config.wwwroot}}/theme/yinyang/pix/store_google.svg" alt="Play Store"></a>{{/iosappid}}
-                        {{#androidappid}}<a href="https://play.google.com/store/apps/details?id={{androidappid}}"><img src="{{config.wwwroot}}/theme/yinyang/pix/store_apple.svg" alt="App Store"></a>{{/androidappid}}
-                    </div>
-
-                    <div class="networks">
-                        <p>{{#str}}followus, theme_yinyang{{/str}}</p>
-                        {{#whatsapp}}<a href="https://api.whatsapp.com/send?phone={{whatsapp}}"><i class="fa fa-whatsapp"></i></a>{{/whatsapp}}
-                        {{#facebook}}<a href="{{facebook}}"><i class="fa fa-facebook"></i></a>{{/facebook}}
-                        {{#twitter}}<a href="{{twitter}}"><i class="fa fa-twitter"></i></a>{{/twitter}}
-                        {{#instagram}}<a href="{{instagram}}"><i class="fa fa-instagram"></i></a>{{/instagram}}
-                        {{#linkedin}}<a href="{{linkedin}}"><i class="fa fa-linkedin"></i></a>{{/linkedin}}
-                        {{#youtube}}<a href="{{youtube}}"><i class="fa fa-youtube"></i></a>{{/youtube}}
-                    </div>
+                <div class="col-md-4 contact">
+                    <h5 style="font-weight:400; padding-bottom:10px;"><b>{{#str}}sities, theme_yinyang{{/str}}</b></h5>
+                    
+                    <p><a href="https://www.acl.cl/">{{#str}}acl, theme_yinyang{{/str}}</a></p>
+                    <p><a href="https://www.aclacademy.cl/">{{#str}}academy, theme_yinyang{{/str}}</p>
+                    <p><a href="https://www.aclacademy.cl/">{{#str}}partners, theme_yinyang{{/str}}</p>
                 </div>
             </div>
 
             <div id="course-footer">{{{ output.course_footer }}}</div>
             {{{ output.standard_footer_html }}}
             {{{ output.standard_end_of_body_html }}}
+            {{{ output.get_categories }}}
         </div>
     </div>
 </footer>
